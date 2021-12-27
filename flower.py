@@ -11,7 +11,7 @@ def setup():
     stroke(0, 25)
     noFill()
     fill(248,248,255)
-    rect(18,18,745,1000)
+    rect(0,0,760,1000)
 
 def draw():
     
@@ -40,6 +40,8 @@ def draw():
     
     if radius == -600:
         noLoop()
+        save("Examples/" + str(int(random(10000))) + ".png")
         
+
     
     
