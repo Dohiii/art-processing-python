@@ -8,13 +8,14 @@ def setup():
     global displayWidth, displayHeight, radius
     size(displayWidth, displayHeight )
     background(0)
+    stroke(0, 25)
     noFill()
-    stroke(0,191,255, 25)
-   
-    radius = height / 2
-
+    fill(248,248,255)
+    rect(18,18,745,1000)
 
 def draw():
+    
+    
     translate(frameCount, 0)
     # background(0)
     
@@ -23,6 +24,8 @@ def draw():
     global TOTAL_DEGREES, radius, start, s
 
     beginShape()
+    
+    noFill()
     for i in range(TOTAL_DEGREES):
         noiseFactor = noise(i * 0.02, float(frameCount) / 150)
         x = center_x + radius * cos(radians(i)) * noiseFactor
@@ -33,8 +36,10 @@ def draw():
     radius -= 1
     
     if radius == 0:
-        stroke(135,206,250, 25)
+        stroke(255, 25)
     
     if radius == -600:
         noLoop()
+        
+    
     
